@@ -23,12 +23,12 @@ install(){
     $cmd install wget screen -y
     
     mkdir /root/miner_proxy
-    wget https://raw.githubusercontent.com/mine-Proxy/MinerProxy/main/run.sh -O /root/miner_proxy/run.sh
+    wget https://raw.githubusercontent.com/mine-Proxy/beifen/main/run.sh -O /root/miner_proxy/run.sh
     chmod 777 /root/miner_proxy/run.sh
-    wget https://raw.githubusercontent.com/mine-Proxy/MinerProxy/main/server.key -O /root/miner_proxy/server.key
-    wget https://raw.githubusercontent.com/mine-Proxy/MinerProxy/main/server.pem -O /root/miner_proxy/server.pem
+    wget https://raw.githubusercontent.com/mine-Proxy/beifen/main/server.key -O /root/miner_proxy/server.key
+    wget https://raw.githubusercontent.com/mine-Proxy/beifen/main/server.pem -O /root/miner_proxy/server.pem
     
-    wget https://raw.githubusercontent.com/mine-Proxy/MinerProxy/main/MinerProxy_6.3.6 -O /root/miner_proxy/MinerProxy
+    wget https://raw.githubusercontent.com/mine-Proxy/beifen/main/MinerProxy_6.3.6 -O /root/miner_proxy/MinerProxy
     chmod 777 /root/miner_proxy/MinerProxy
 
     screen -dmS miner_proxy
@@ -61,7 +61,7 @@ uninstall(){
 
 
 update(){
-    wget https://raw.githubusercontent.com/mine-Proxy/MinerProxy/main/MinerProxy_6.3.6 -O /root/MinerProxy
+    wget https://raw.githubusercontent.com/mine-Proxy/beifen/main/MinerProxy_6.3.6 -O /root/MinerProxy
 
     if screen -list | grep -q "miner_proxy"; then
         screen -X -S miner_proxy quit
